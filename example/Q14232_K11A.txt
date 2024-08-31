@@ -1,0 +1,2 @@
+Protein	mutation	output_logits	label	type
+Q14232	K11A	0.4689091145992279	0	Destablizing
