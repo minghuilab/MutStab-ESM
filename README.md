@@ -16,3 +16,45 @@ Our method was compared with other approaches across multiple independent test s
 ```
 pip install torch
 ```
+
+
+
+## Running
+
+1. Environment
+
+We provide the Python environment for running the program, with the installation as follows:
+
+```
+mamba env create -f pyG.yml
+```
+
+
+2. Prepare
+
+Prepare a FASTA-formatted sequence file that includes both the wild-type and mutant sequences.
+
+![image](https://github.com/user-attachments/assets/d77ad444-3951-48aa-bf78-5e1827e8c6ae)
+
+
+3. Calculate ESM embedding
+
+```
+python ~/MutStab-ESM/ESM/esm/scripts/extract.py  esm2_t36_3B_UR50D  Q14232.fa output --repr_layers -1 --include mean per_tok --truncation_seq_length 2000
+
+```
+
+
+4. Predict
+
+```
+python /public/home/zff/MutStab-ESM/run_esm_prediction.py -s /public/home/zff/MutStab-ESM/example/Q14232.fa -m K11A -f /public/home/zff/MutStab-ESM/example/output/ -o /public/home/zff/MutStab-ESM/example/
+```
+
+-s: Sequence file
+
+-m: Mutation
+
+-f: Path of the Protein embedding files
+
+-o: Output path
