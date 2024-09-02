@@ -48,7 +48,7 @@ python ~/MutStab-ESM/ESM/esm/scripts/extract.py  esm2_t36_3B_UR50D  Q14232.fa ou
 4. Predict
 
 ```
-python /public/home/zff/MutStab-ESM/run_esm_prediction.py -s /public/home/zff/MutStab-ESM/example/Q14232.fa -m K11A -f /public/home/zff/MutStab-ESM/example/output/ -o /public/home/zff/MutStab-ESM/example/
+python ~/MutStab-ESM/run_esm_prediction.py -s ~/MutStab-ESM/example/Q14232.fa -m K11A -f ~/MutStab-ESM/example/output/ -o ~/MutStab-ESM/example/
 ```
 
 -s: Sequence file
