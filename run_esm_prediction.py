@@ -41,7 +41,7 @@ mut = args.mutation
 fea_path = args.featurePath
 output_path = args.output
 
-os.chdir('/public/home/zff/MutStab-ESM/example/')
+os.chdir('~/MutStab-ESM/example/')
 
 # 获取野生型和突变型的序列
 f = open(seq_file_path)
@@ -266,7 +266,7 @@ class PremPS2(nn.Module):
 
 # run
 mutsta_esm = PremPS2()
-mutsta_esm_weights = torch.load('/public/home/zff/MutStab-ESM/Model/MLP_TE2_esm.pt',map_location=torch.device('cpu'))
+mutsta_esm_weights = torch.load('~/MutStab-ESM/Model/MLP_TE2_esm.pt',map_location=torch.device('cpu'))
 mutsta_esm.load_state_dict(mutsta_esm_weights)
 
 mutsta_esm.eval()
